@@ -39,7 +39,7 @@ public class Main extends PApplet implements OnMessageListener {
 	// Processing methods
 	// -------------------------------------
 	public void settings() {
-		size(500, 800);
+		size(800, 500);
 	}
 
 	public void setup() {
@@ -61,10 +61,10 @@ public class Main extends PApplet implements OnMessageListener {
 		if (connected) {
 
 			fill(avatar.getR(), avatar.getG(), avatar.getB());
-			ellipse(avatar.getxPos(), avatar.getyPos(), 10, 10);
+			ellipse(avatar.getxPos(), avatar.getyPos(), 20, 20);
 
 			fill(255);
-			text(avatar.getName(), avatar.getxPos(), avatar.getyPos() - 15);
+			text(avatar.getName(), avatar.getxPos(), avatar.getyPos() - 25);
 
 		} else {
 
