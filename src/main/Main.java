@@ -82,6 +82,7 @@ public class Main extends PApplet implements OnMessageListener {
 	public void onMessage(String msg) {
 		// TODO Auto-generated method stub
 
+		System.out.println(msg);
 		Generic generic = gson.fromJson(msg, Generic.class);
 
 		switch (generic.type) {
@@ -90,7 +91,7 @@ public class Main extends PApplet implements OnMessageListener {
 
 			Direction direction = gson.fromJson(msg, Direction.class);
 			avatar.setDir(direction.getDirection());
-
+			avatar.move(width, height);
 			break;
 
 		case "Name":

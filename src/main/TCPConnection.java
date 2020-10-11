@@ -58,8 +58,10 @@ public class TCPConnection extends Thread {
 
 		try {
 
+			System.out.println("Esperando...");
 			ServerSocket serverSocket = new ServerSocket(5000);
 			Socket socket = serverSocket.accept();
+			System.out.println("Conectado");
 
 			writer = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
 			BufferedReader reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));

@@ -40,6 +40,38 @@ public class Avatar {
 	}
 	
 	// -------------------------------------
+    // Constructor
+    // -------------------------------------
+	public void move(int width, int height) {
+		
+		switch(dir) {
+		
+			case RIGHT:
+				if(xPos+10<width)
+					xPos+=10;
+				break;
+				
+			case LEFT:
+				if(xPos-10>0)
+					xPos-=10;
+				break;
+				
+			case DOWN:
+				if(yPos+10<height)
+					yPos+=10;
+				break;
+				
+			case UP:
+				if(yPos-10>0)
+					yPos-=10;
+				break;
+				
+			
+		}
+		
+	}
+	
+	// -------------------------------------
     // Getters and setters
     // -------------------------------------
 	public int getxPos() {
