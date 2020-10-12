@@ -39,13 +39,13 @@ public class Main extends PApplet implements OnMessageListener {
 	// Processing methods
 	// -------------------------------------
 	public void settings() {
-		size(800, 500);
+		size(810, 510);
 	}
 
 	public void setup() {
 
 		connected = false;
-		avatar = new Avatar(100, 100, 255, 255, 255, Dirs.DOWN, "");
+		avatar = new Avatar(405, 255, 255, 255, 255, Dirs.DOWN, "");
 
 		gson = new Gson();
 
@@ -61,10 +61,11 @@ public class Main extends PApplet implements OnMessageListener {
 		if (connected) {
 
 			fill(avatar.getR(), avatar.getG(), avatar.getB());
-			ellipse(avatar.getxPos(), avatar.getyPos(), 20, 20);
+			noStroke();
+			ellipse(avatar.getxPos(), avatar.getyPos(), 30, 30);
 
 			fill(255);
-			text(avatar.getName(), avatar.getxPos(), avatar.getyPos() - 25);
+			text(avatar.getName(), avatar.getxPos()-15, avatar.getyPos() - 25);
 
 		} else {
 
@@ -82,7 +83,6 @@ public class Main extends PApplet implements OnMessageListener {
 	public void onMessage(String msg) {
 		// TODO Auto-generated method stub
 
-		System.out.println(msg);
 		Generic generic = gson.fromJson(msg, Generic.class);
 
 		switch (generic.type) {

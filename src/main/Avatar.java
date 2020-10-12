@@ -34,8 +34,8 @@ public class Avatar {
 		this.r = r;
 		this.g = g;
 		this.b = b;
-		this.dir=dir;
-		this.setName(name);
+		this.dir = dir;
+		this.name = name;
 		
 	}
 	
@@ -47,26 +47,25 @@ public class Avatar {
 		switch(dir) {
 		
 			case RIGHT:
-				if(xPos+10<width)
-					xPos+=10;
+				if(xPos+15<width)
+					xPos+=15;
 				break;
 				
 			case LEFT:
-				if(xPos-10>0)
-					xPos-=10;
+				if(xPos-15>0)
+					xPos-=15;
 				break;
 				
 			case DOWN:
-				if(yPos+10<height)
-					yPos+=10;
+				if(yPos+15<height)
+					yPos+=15;
 				break;
 				
 			case UP:
-				if(yPos-10>0)
-					yPos-=10;
+				if(yPos-15>0)
+					yPos-=15;
 				break;
 				
-			
 		}
 		
 	}
@@ -77,30 +76,39 @@ public class Avatar {
 	public int getxPos() {
 		return xPos;
 	}
+	
 	public void setxPos(int xPos) {
 		this.xPos = xPos;
 	}
+	
 	public int getyPos() {
 		return yPos;
 	}
+	
 	public void setyPos(int yPos) {
 		this.yPos = yPos;
 	}
+	
 	public int getR() {
 		return r;
 	}
+	
 	public void setR(int r) {
 		this.r = r;
 	}
+	
 	public int getG() {
 		return g;
 	}
+	
 	public void setG(int g) {
 		this.g = g;
 	}
+	
 	public int getB() {
 		return b;
 	}
+	
 	public void setB(int b) {
 		this.b = b;
 	}

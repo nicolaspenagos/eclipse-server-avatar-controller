@@ -67,7 +67,7 @@ public class TCPConnection extends Thread {
 			BufferedReader reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
 
 			while (!kill) {
-
+				
 				String msg = reader.readLine();
 				observer.onMessage(msg);
 				
@@ -85,8 +85,10 @@ public class TCPConnection extends Thread {
 				()->{
 					
 					try {
+						
 						writer.write(msg + "\n");
 						writer.flush();
+						
 					} catch (IOException e) {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
