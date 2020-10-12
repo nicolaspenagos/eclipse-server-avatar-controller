@@ -70,8 +70,12 @@ public class Main extends PApplet implements OnMessageListener {
 		} else {
 
 			fill(255);
-			text("Waiting for client", 100, 100);
-
+			text("Waiting for client... \n\n\n\nCONTROLLS: \n------------------------------------------------- \n\n   * HOLD UP ARROW TO GO UP \n \n  * HOLD DOWN ARROW TO GO DOWN \n \n  * HOLD RIGHT ARROW TO GO RIGHT \n \n   * HOLD LEFT ARROW TO GO LEFT \n \n  * PRESS COLOR BUTTON TO RANDOMLY CHANGE COLOR", 240, 140);
+			textSize(25);
+			text("                       AVATAR CONTROLLER", 100, 100);
+			textSize(12);
+			text( "\n-------------------------------------------------",240,100);
+			
 		}
 
 	}
